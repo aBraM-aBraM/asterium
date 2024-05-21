@@ -1,0 +1,11 @@
+services:
+
+  db:
+    image: postgres:latest
+    restart: always
+    volumes:
+      - /tmp/postgres-data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: Password1!
